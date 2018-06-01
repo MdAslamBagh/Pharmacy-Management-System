@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38685EE6-8A10-4A6F-AE4B-2F0518B6FC27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PharmacyManagementSystem</RootNamespace>
+    <AssemblyName>PharmacyManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEmployeeLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployeeLayer.Designer.cs">
+      <DependentUpon>AddEmployeeLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMedicineLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMedicineLayer.Designer.cs">
+      <DependentUpon>AddMedicineLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLayer.Designer.cs">
+      <DependentUpon>AdminLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCustomerLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCustomerLayer.Designer.cs">
+      <DependentUpon>DeleteCustomerLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteEmployeeLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteEmployeeLayer.Designer.cs">
+      <DependentUpon>DeleteEmployeeLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteMedicineLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMedicineLayer.Designer.cs">
+      <DependentUpon>DeleteMedicineLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeModifyLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeModifyLayer.Designer.cs">
+      <DependentUpon>EmployeeModifyLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicineModifyLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicineModifyLayer.Designer.cs">
+      <DependentUpon>MedicineModifyLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicineReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicineReport.Designer.cs">
+      <DependentUpon>MedicineReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicineSellCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicineSellCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModifyCustomerLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyCustomerLayer.Designer.cs">
+      <DependentUpon>ModifyCustomerLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrderLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderLayer.Designer.cs">
+      <DependentUpon>OrderLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderReport.Designer.cs">
+      <DependentUpon>OrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacyDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PharmacyDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintLayer.Designer.cs">
+      <DependentUpon>PrintLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSaleLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSaleLayer.Designer.cs">
+      <DependentUpon>RetailSaleLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpLayer.Designer.cs">
+      <DependentUpon>SignUpLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartingLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartingLayer.Designer.cs">
+      <DependentUpon>StartingLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLayer.Designer.cs">
+      <DependentUpon>UserLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCustomerLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCustomerLayer.Designer.cs">
+      <DependentUpon>ViewCustomerLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEmployeeLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEmployeeLayer.Designer.cs">
+      <DependentUpon>ViewEmployeeLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStockLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStockLayer.Designer.cs">
+      <DependentUpon>ViewStockLayer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEmployeeLayer.resx">
+      <DependentUpon>AddEmployeeLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMedicineLayer.resx">
+      <DependentUpon>AddMedicineLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLayer.resx">
+      <DependentUpon>AdminLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCustomerLayer.resx">
+      <DependentUpon>DeleteCustomerLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteEmployeeLayer.resx">
+      <DependentUpon>DeleteEmployeeLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteMedicineLayer.resx">
+      <DependentUpon>DeleteMedicineLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeModifyLayer.resx">
+      <DependentUpon>EmployeeModifyLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicineModifyLayer.resx">
+      <DependentUpon>MedicineModifyLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicineReport.resx">
+      <DependentUpon>MedicineReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicineSellCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MedicineSellCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyCustomerLayer.resx">
+      <DependentUpon>ModifyCustomerLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderLayer.resx">
+      <DependentUpon>OrderLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderReport.resx">
+      <DependentUpon>OrderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintLayer.resx">
+      <DependentUpon>PrintLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RetailSaleLayer.resx">
+      <DependentUpon>RetailSaleLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpLayer.resx">
+      <DependentUpon>SignUpLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartingLayer.resx">
+      <DependentUpon>StartingLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLayer.resx">
+      <DependentUpon>UserLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCustomerLayer.resx">
+      <DependentUpon>ViewCustomerLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEmployeeLayer.resx">
+      <DependentUpon>ViewEmployeeLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStockLayer.resx">
+      <DependentUpon>ViewStockLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DeleteEmployeeLayer.datasource" />
+    <None Include="EntityLayer.CustomerInfo.datasource" />
+    <None Include="EntityLayer.EmployeeInfo.datasource" />
+    <None Include="EntityLayer.OrderInfo.datasource" />
+    <None Include="packages.config" />
+    <None Include="PharmacyDatabaseDataSet.xsc">
+      <DependentUpon>PharmacyDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PharmacyDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PharmacyDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PharmacyDatabaseDataSet.xss">
+      <DependentUpon>PharmacyDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{88729b9a-07fb-4753-8954-e2ee53d1bb12}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{2fe6f4d7-e02b-45fa-9fb9-38478f956319}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PharmacyDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PharmacyDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>PharmacyDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

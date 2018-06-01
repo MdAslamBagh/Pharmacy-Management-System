@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PharmacyDatabaseDataSet" targetNamespace="http://tempuri.org/PharmacyDatabaseDataSet.xsd" xmlns:mstns="http://tempuri.org/PharmacyDatabaseDataSet.xsd" xmlns="http://tempuri.org/PharmacyDatabaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PharmacyDatabaseConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PharmacyDatabaseConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PharmacyManagementSystem.Properties.Settings.GlobalReference.Default.PharmacyDatabaseConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomerInfoesTableAdapter" GeneratorDataComponentClassName="CustomerInfoesTableAdapter" Name="CustomerInfoes" UserDataComponentName="CustomerInfoesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PharmacyDatabaseConnectionString1 (Settings)" DbObjectName="PharmacyDatabase.dbo.CustomerInfoes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CustomerName, Phone FROM dbo.CustomerInfoes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustomerName" DataSetColumn="CustomerName" />
+              <Mapping SourceColumn="Phone" DataSetColumn="Phone" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderInfoesTableAdapter" GeneratorDataComponentClassName="OrderInfoesTableAdapter" Name="OrderInfoes" UserDataComponentName="OrderInfoesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PharmacyDatabaseConnectionString1 (Settings)" DbObjectName="PharmacyDatabase.dbo.OrderInfoes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Order_Id, OrderDate FROM dbo.OrderInfoes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Order_Id" DataSetColumn="Order_Id" />
+              <Mapping SourceColumn="OrderDate" DataSetColumn="OrderDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PharmacyDatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PharmacyDatabaseDataSet" msprop:Generator_UserDSName="PharmacyDatabaseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CustomerInfoes" msprop:Generator_TableClassName="CustomerInfoesDataTable" msprop:Generator_TableVarName="tableCustomerInfoes" msprop:Generator_TablePropName="CustomerInfoes" msprop:Generator_RowDeletingName="CustomerInfoesRowDeleting" msprop:Generator_RowChangingName="CustomerInfoesRowChanging" msprop:Generator_RowEvHandlerName="CustomerInfoesRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerInfoesRowDeleted" msprop:Generator_UserTableName="CustomerInfoes" msprop:Generator_RowChangedName="CustomerInfoesRowChanged" msprop:Generator_RowEvArgName="CustomerInfoesRowChangeEvent" msprop:Generator_RowClassName="CustomerInfoesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerName" msprop:Generator_ColumnVarNameInTable="columnCustomerName" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" msprop:Generator_UserColumnName="CustomerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_UserColumnName="Phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderInfoes" msprop:Generator_TableClassName="OrderInfoesDataTable" msprop:Generator_TableVarName="tableOrderInfoes" msprop:Generator_TablePropName="OrderInfoes" msprop:Generator_RowDeletingName="OrderInfoesRowDeleting" msprop:Generator_RowChangingName="OrderInfoesRowChanging" msprop:Generator_RowEvHandlerName="OrderInfoesRowChangeEventHandler" msprop:Generator_RowDeletedName="OrderInfoesRowDeleted" msprop:Generator_UserTableName="OrderInfoes" msprop:Generator_RowChangedName="OrderInfoesRowChanged" msprop:Generator_RowEvArgName="OrderInfoesRowChangeEvent" msprop:Generator_RowClassName="OrderInfoesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Order_Id" msprop:Generator_ColumnVarNameInTable="columnOrder_Id" msprop:Generator_ColumnPropNameInRow="Order_Id" msprop:Generator_ColumnPropNameInTable="Order_IdColumn" msprop:Generator_UserColumnName="Order_Id" type="xs:int" />
+              <xs:element name="OrderDate" msprop:Generator_ColumnVarNameInTable="columnOrderDate" msprop:Generator_ColumnPropNameInRow="OrderDate" msprop:Generator_ColumnPropNameInTable="OrderDateColumn" msprop:Generator_UserColumnName="OrderDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
